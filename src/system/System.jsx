@@ -4,10 +4,16 @@ import { useRef } from 'react'
 
 const System = () => {
   const main = useRef(null); // main is like a pointer | main.current = *main
-  const [scaleFactor, setScaleFactor] = useState(620);
+  const [scaleFactor, setScaleFactor] = useState(1100);
+  const [translateFactor, setTranslateFactor] = useState(-3);
+  const [opacity, setOpacity] = useState(1);
 
   let style = {
-    transform: `scale(${scaleFactor}%)`,
+    transform: `scale(${scaleFactor}%) translateX(${translateFactor}%)`
+  }
+
+  let opacityClass = {
+    opacity: `${opacity}`
   }
 
   useEffect(()=>{
@@ -21,7 +27,9 @@ const System = () => {
         if (e.deltaY > 0) {
           setScaleFactor((current) => {
             if (current < 100) return current;
-            return current - 1;
+            setTranslateFactor((c) => c + 0.009);
+            setOpacity(o => Math.max(0, o - 0.01))
+            return current - 5;
           })
         }
     })
@@ -30,7 +38,10 @@ const System = () => {
   return ( 
     <>
         <div ref={main} className={`main`} style={style}>
-            <div className="sun"></div>
+            <div className="sun flex items-center">
+              <h1 className={`relative font-thin italic text-orange-400 left-[3vw]`} style={opacityClass}>SOLAR</h1>
+              <h1 className={`relative text-white left-[4vw] info`} style={opacityClass}>INFO</h1>
+            </div>
             <div className="mercury"></div>
             <div className="venus"></div>    
             <div className="earth"></div> 
