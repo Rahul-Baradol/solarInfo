@@ -20,8 +20,9 @@
     --dist_ur: calc(var(--dist_sa) + var(--planet_sep));
     --dist_ne: calc(var(--dist_ur) + var(--planet_sep));
 
-    --earth-days:5s;
+    --earth-days: 5s;
 }
+
 * {margin: 0; padding: 0;}
 
 
@@ -32,6 +33,8 @@
     position: relative;
     width: 100vw;
     height: 100vh;
+    size: 10rem;
+    z-index: 10;
 }
 .sun {
     /* border: 4px solid white; */
