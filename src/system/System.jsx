@@ -20,18 +20,20 @@ const System = () => {
     main.current.addEventListener('wheel', (e)=>{
         if (e.deltaY > 0) {
           setScaleFactor((current) => {
-            if (current < 100) return current;
+            console.log(current)
+            if (current < 110) return current;
             setTranslateFactor((c) => c + 0.009);
             setOpacity(o => o - 0.01)
             return current - 5;
           })
         } else {
           setScaleFactor((current) => {
-            if (current < 100 || current > 1100) return current;
+            if (current < 110 || current > 1100) return current;
             setTranslateFactor((c) => c - 0.009);
             setOpacity(o => o + 0.01)
             return current + 5;
           })
+          
         }
     })
   }, [main])
@@ -40,7 +42,7 @@ const System = () => {
     <>
         <div ref={main} className={`main`} style={mainStyle}>
             <div className="sun flex items-center">
-              <h1 className={`relative font-thin italic text-orange-400 left-[3vw]`} style={opacityClass}>SOLAR</h1>
+              <h1 className={`relative font-thin text-orange-400 left-[3vw]`} style={opacityClass}>SOLAR</h1>
               <h1 className={`relative text-white left-[4vw] info`} style={opacityClass}>INFO</h1>
             </div>
             <div className="mercury"></div>
@@ -49,10 +51,13 @@ const System = () => {
             <div className="mars"></div> 
             <div className="jupyter"></div>
             <div className="saturn">
-              <div className="ring"></div>
-              <div className="top"></div>
+              <div className="rings"></div>
+              <div className="tops"></div>
             </div>
-            <div className="uranus"></div>
+            <div className="uranus">
+              <div className="ringu"></div>
+              <div className="topu"></div>
+            </div>
             <div className="neptune"></div>
         </div>
     </>
