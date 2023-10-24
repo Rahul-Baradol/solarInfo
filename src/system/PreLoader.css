@@ -2,7 +2,6 @@
     animation-name: loader;
     animation-iteration-count: infinite;
     animation-duration: 2s;
-    transform-origin: -100px -100px;
 }
 
 @keyframes loader {
