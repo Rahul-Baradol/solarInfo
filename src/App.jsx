@@ -1,11 +1,13 @@
 
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import System from './system/System'
-import Planet from './system/Planet'
-import NotFound from './system/NotFound'
+import Planet from './system/Planets'
+
 
 function App() {
 
+const visited =0
   return (
     <>
     <BrowserRouter>
@@ -20,7 +22,6 @@ function App() {
         <Route path="/saturn" element={<Planet name="saturn" />} />
         <Route path="/uranus" element={<Planet name="uranus" />} />
         <Route path="/neptune" element={<Planet name="neptune" />} />
-        <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
     </>
