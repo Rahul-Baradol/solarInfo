@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './PreLoader.css'
 import { Link } from 'react-router-dom'
 
+
 const PreLoader = () => {
   return (
     <>
@@ -19,7 +20,7 @@ const Planet = (props) => {
 
   useEffect(() => {
     if (data) return;
-    fetch(`http://localhost:8000/planets/${props.name}`)
+    fetch(`${import.meta.env.VITE_SERVER_URL}/planets/${props.name}`)
       .then((res)=>{
         return res.json();
       }).then((d) => {

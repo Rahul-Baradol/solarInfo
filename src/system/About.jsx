@@ -27,7 +27,7 @@ export default function About(props) {
         
         <Profile data-image="" alt="" data-content="" link1="" link2="" link3="" rotate="1" styles={gradientStyles[1]} links={[]} />
 
-        <Profile data=" I am Rahul Baradol, a 2nd year Computer Science student who loves building projects and have fun with existing web technologies! I also love solving problems on Leetcode. Yup.....you read it right I love Leetcode! My tech stack includes React, NextJS, Bootstrap, Tailwind CSS, Node JS, Express JS..so on and I am currently exploring stuff related to Cloud and Devops like Docker, Kubernetes,....etc. I also love participating in short contests of algorithms. I got a second place in Alcoding Practice Placement Test series hosted by my university and I am top 5% (personal highest) on Leetcode!!" 
+        <Profile data="I am a 2nd year Computer Science student who loves building projects and have fun with existing web technologies! I also love solving problems on Leetcode. Yup.....you read it right I love Leetcode! My tech stack includes React, NextJS, Bootstrap, Tailwind CSS, Node JS, Express JS..so on and I am also into Cloud and Devops. I also love participating in short contests of algorithms. I got a second place in Alcoding Practice Placement Test series hosted by my university and I am top 5% on Leetcode! I also love System Design and System Engineering!" 
         url={rahul}  
         rotate="0" 
         styles={gradientStyles[2]}
