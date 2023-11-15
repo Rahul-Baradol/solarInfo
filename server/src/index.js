@@ -4,17 +4,7 @@ const app = express();
 const port = 8000;
 const planets = require('./routes/planets');
 
-app.use((req, res, next) => {
-    const allowedOrigins = ['http://localhost:3000', 'https://solar-info-frontend.vercel.app/'];
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-        res.setHeader('Access-Control-Allow-Origin', origin);
-    }
-    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.header('Access-Control-Allow-Credentials', true);
-    return next();
-});
+app.use(cors());
 
 app.use('/planets/', planets);
 app.get('/', (req, res) => {

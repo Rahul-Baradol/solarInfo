@@ -25,4 +25,4 @@ router.get('/:slug', async (req, res, next) => {
     next();
 })
 
-module.exports = router;
+module.exports = router

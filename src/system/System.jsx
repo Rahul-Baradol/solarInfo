@@ -7,11 +7,9 @@ import Ui from './UserInterface'
 
 const System = ({ scaleFactor, setScaleFactor, translateFactor, setTranslateFactor, opacity, setOpacity, getInitialScaleFactor}) => {
   const main = useRef(null);
-
   let mainStyle = {
     transform: `scale(${scaleFactor}%) translateX(${translateFactor}%)`
   }
-
   let opacityClass = {
     opacity: `${opacity}`
   }

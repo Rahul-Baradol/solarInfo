@@ -3,7 +3,7 @@ import React from 'react'
 function Profile(props) {
   return (
     <>
-        <div className={`md:rounded-full flex flex-col md:flex-row border-2 justify-between items-center gap-10 p-10 w-[96.5vw] h-fit profile`} style={props.styles}>
+        <div className={`md:rounded-full flex flex-col md:flex-row justify-between items-center gap-10 p-10 w-[96.5vw] h-fit profile`} style={props.styles}>
           {
             props.rotate === "0" ? <>
               <img src={props.url} className='w-[160px] border-2 h-fit rounded-full' />
@@ -25,7 +25,7 @@ function Profile(props) {
             </> :
             <>
               <div className='text-white'></div>  
-              <img src={props.url} className='border-2 w-[160px] h-fit rounded-full' />
+              <img src={props.url} className=' w-[160px] h-fit rounded-full' />
             </>
           }
         </div>
