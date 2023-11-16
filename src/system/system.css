@@ -631,7 +631,7 @@ body::before {
   }
 
 
-  .mercury-i, .venus-i, .earth-i, .mars-i , .jupiter-i, .saturn-i , .uranus-i, .neptune-i{
+  .mercury-i, .venus-i, .earth-i, .mars-i , .jupiter-i, .saturn-i , .uranus-i, .neptune-i , .sun-i {
     position: relative;
     border-radius: 50%;
     /* transform: translate(-50%,-50%);  */
@@ -657,6 +657,28 @@ body::before {
     background-position: calc(1.0vw * var(--planet-size-multiplier)) calc(0.1vw * var(--planet-size-multiplier));
   }
   
+  /* Sun */
+  .sun-i {
+    width: 30vw;
+    height: 30vw;
+    background-size: cover;
+    background-repeat: repeat;
+    animation: rot_i 15s infinite linear;
+    background-position: calc(1.0vw * var(--planet-size-multiplier)) calc(0.1vw * var(--planet-size-multiplier));
+    background-color: goldenrod;
+    box-shadow: inset 0 0 calc(1vw * var(--planet-size-multiplier)) orange,
+                inset 0 0 calc(2vw * var(--planet-size-multiplier)) orange, 
+                inset 0 0 calc(3vw * var(--planet-size-multiplier)) orange,
+                0 0 calc(2.0vw * var(--planet-size-multiplier)) goldenrod, 
+                0 0 calc(3.0vw * var(--planet-size-multiplier)) goldenrod, 
+                0 0 calc(5.0vw * var(--planet-size-multiplier)) goldenrod, 
+                0 0 calc(10.0vw * var(--planet-size-multiplier)) goldenrod, 
+                0 0 calc(15.0vw * var(--planet-size-multiplier)) goldenrod, 
+                0 0 calc(20.0vw * var(--planet-size-multiplier)) goldenrod, 
+                0 0 calc(25.0vw * var(--planet-size-multiplier)) goldenrod;
+    background-image: url("textures/2k_sun.jpg");    
+  }
+
   /* Earth */
   .earth-i {
     width: 30vw;
