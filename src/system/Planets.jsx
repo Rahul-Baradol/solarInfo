@@ -22,7 +22,7 @@ const Planet = (props) => {
 
   useEffect(() => {
     if (data) return;
-    fetch(`http://localhost:8000/planets/${props.name}`)
+    fetch(`https://solar-info-backend.vercel.app/planets/${props.name}`)
       .then((res) => {
         return res.json();
       }).then((d) => {
