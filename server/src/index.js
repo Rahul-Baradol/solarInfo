@@ -8,7 +8,6 @@ app.use(cors());
 
 app.use('/planets/', planets);
 app.get('/', (req, res) => {
-    res.setHeader("Content-Type")
     res.send("API Service for SolarInfo");
 })
 
