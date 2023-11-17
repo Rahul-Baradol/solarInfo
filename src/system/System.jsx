@@ -36,7 +36,7 @@ const System = ({ scaleFactor, setScaleFactor, translateFactor, setTranslateFact
   }, [main])
 
   const viewportWidth = window.innerWidth;
-  const leftvalue=viewportWidth >= 800?'3vw':'0.2vw'
+  const leftvalue=viewportWidth >= 800?'left-[3vw]':'left-[0.2vw]'
   const leftvaluesep=viewportWidth >= 800? '6.5vw':'6.5vw'
   // const leftvalue='3vw'
 
@@ -45,8 +45,8 @@ const System = ({ scaleFactor, setScaleFactor, translateFactor, setTranslateFact
     <div className=''>
         <div ref={main} className={`main flex justify-center items-center`} style={mainStyle}>
             <div className="sun flex absolute items-center">
-                <h1 className={`absolute font-thin text-white left-[${leftvalue}] info`} style={opacityClass}>SOLAR</h1>
-                <h1 className={`absolute text-white left-[${leftvaluesep}] info`} style={opacityClass}>INFO</h1>
+                <h1 className={`absolute font-thin text-white ${leftvalue} info`} style={opacityClass}>SOLAR</h1>
+                <h1 className={`absolute text-white left-[6.5vw] info`} style={opacityClass}>INFO</h1>
                 {/* <Sun/> */}
                 {/* <Link to="/sun">
                   <div className="sun-shadow" />

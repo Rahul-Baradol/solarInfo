@@ -18,11 +18,10 @@ const Planet = (props) => {
   const planetName = location.pathname.slice(1);
   let heading = props.name[0].toUpperCase() + props.name.slice(1);
   const [data, setData] = useState(null);
-  let arrow = "<-";
 
   useEffect(() => {
     if (data) return;
-    fetch(`https://solar-info-backend.vercel.app/planets/${props.name}`)
+    fetch(`${import.meta.env.VITE_SERVER_URL}/planets/${props.name}`)
       .then((res) => {
         return res.json();
       }).then((d) => {
